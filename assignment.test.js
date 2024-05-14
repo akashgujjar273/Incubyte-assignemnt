@@ -32,9 +32,14 @@ test('add function handles a function call as input', () => {
     expect(add(addNums=()=>2+5)).toBe(false);
 });
 
-test('add function handles object as inputs', () => {
+test('add function handles boolean conditions as input', () => {
     expect(add({})).toBe(false);
 });
+
+test('add function handles object as inputs', () => {
+    expect(add(1 === 1)).toBe(false);
+});
+
 
 test('add function handles string that does not containt any numbers', () => {
     expect(add('asoihdfsd')).toBe(false);
