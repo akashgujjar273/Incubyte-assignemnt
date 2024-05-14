@@ -20,6 +20,11 @@ test('add function handles new lines between numbers', () => {
     expect(add('1\n2,3')).toBe(6);
 });
 
+test('add function handles custom delimiters', () => {
+    expect(add('//;\n1;2')).toBe(3);
+});
+  
+
 test('add function throws an exception for negative numbers', () => {
   expect(() => {
     add('-1,2,-3');

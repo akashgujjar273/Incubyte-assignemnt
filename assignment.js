@@ -2,6 +2,13 @@ function add(params) {
     let commaSepratorString = ',';
     let nums = params;
 
+
+    if (params.startsWith('//')) {
+        const parts = params.split('\n');
+        commaSepratorString = parts[0][2];
+        nums = parts[1];
+    }
+
     if (nums === '') {
         return 0;
     }
