@@ -28,6 +28,10 @@ test('add function handles number inputs', () => {
     expect(add(0)).toBe(false);
 });
 
+test('add function handles a function call as input', () => {
+    expect(add(addNums=()=>2+5)).toBe(false);
+});
+
 test('add function handles object as inputs', () => {
     expect(add({})).toBe(false);
 });
