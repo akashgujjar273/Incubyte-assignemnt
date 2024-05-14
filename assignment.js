@@ -1,7 +1,7 @@
 function add(params) {
 
-    if(typeof params !== 'string'){
-        return false   
+    if (typeof params !== 'string') {
+        return false
     }
 
     let commaSepratorString = ',';
@@ -32,6 +32,5 @@ function add(params) {
 
     return numArray.reduce((sum, num) => sum + parseInt(num, 10), 0);
 }
-
 
 module.exports = add;
