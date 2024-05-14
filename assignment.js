@@ -13,6 +13,7 @@ function add(params) {
         throw new Error(`negative numbers not allowed: ${negatives.join(',')}`);
     }
 
+    return numArray.reduce((sum, num) => sum + parseInt(num, 10), 0);
 }
 
 
