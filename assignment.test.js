@@ -24,8 +24,13 @@ test('add function handles custom delimiters', () => {
     expect(add('//;\n1;2')).toBe(3);
 });
 
-test('add function handles custom delimiters', () => {
+test('add function handles number inputs', () => {
     expect(add(0)).toBe(false);
+});
+
+
+test('add function handles object as inputs', () => {
+    expect(add({})).toBe(false);
 });
   
 
