@@ -1,5 +1,11 @@
 function add(params) {
     
+    let nums = params;
+
+    if (nums === '') {
+        return 0;
+    }
+
 }
 
 
