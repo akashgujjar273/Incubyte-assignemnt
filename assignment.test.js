@@ -16,6 +16,9 @@ test('add function handles an n amount of numbers', () => {
     expect(add('1,2,3,4,5')).toBe(15);
 });
   
+test('add function handles new lines between numbers', () => {
+    expect(add('1\n2,3')).toBe(6);
+});
 
 test('add function throws an exception for negative numbers', () => {
   expect(() => {
