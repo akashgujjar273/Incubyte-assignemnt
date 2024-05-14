@@ -32,6 +32,10 @@ test('add function handles number inputs', () => {
 test('add function handles object as inputs', () => {
     expect(add({})).toBe(false);
 });
+
+test('add function handles string that does not containt any numbers', () => {
+    expect(add('asoihdfsd')).toBe(false);
+});
   
 
 test('add function throws an exception for negative numbers', () => {

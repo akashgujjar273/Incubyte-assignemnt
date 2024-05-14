@@ -20,6 +20,12 @@ function add(params) {
     const numArray = nums.split(new RegExp(`[${commaSepratorString}\n]`));
     const negatives = numArray.filter(num => parseInt(num, 10) < 0);
 
+    const nonNumberValues = numArray.filter(num => isNaN(parseInt(num, 10)));
+
+    if (nonNumberValues.length === numArray.length) {
+        return false
+    }
+
     if (negatives.length > 0) {
         throw new Error(`negative numbers not allowed: ${negatives.join(',')}`);
     }
