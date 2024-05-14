@@ -1,7 +1,11 @@
 function add(params) {
+
+    if(typeof params !== 'string'){
+        return false   
+    }
+
     let commaSepratorString = ',';
     let nums = params;
-
 
     if (params.startsWith('//')) {
         const parts = params.split('\n');
