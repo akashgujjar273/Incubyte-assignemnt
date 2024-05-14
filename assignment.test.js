@@ -12,6 +12,11 @@ test('add function returns the sum of two numbers', () => {
   expect(add('1,2')).toBe(3);
 });
 
+test('add function handles an n amount of numbers', () => {
+    expect(add('1,2,3,4,5')).toBe(15);
+});
+  
+
 test('add function throws an exception for negative numbers', () => {
   expect(() => {
     add('-1,2,-3');
